@@ -1,0 +1,9 @@
+[core]
+	editor = /usr/bin/vim
+[push]
+	default = simple
+[user]
+	name = corenel
+	email = xxdsox@gmail.com
+[http]
+    proxy = http://127.0.0.1:6152
