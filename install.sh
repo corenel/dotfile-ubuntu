@@ -2,6 +2,7 @@
 
 # install essential packages
 sudo cp sources.list /etc/apt/sources.list
+sudo add-apt-repository ppa:jonathonf/vim
 sudo apt-get update
 sudo apt-get install -y build-essential openssh-server git wget zsh htop vim python3-pip curl cmake autojump python-pip clang ccache pypy tmux polipo
 

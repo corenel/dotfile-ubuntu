@@ -65,12 +65,20 @@ function noproxy () {
 # virtualenv
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-workon py3.5
+# workon humanoid
+
+# for ZJUDancer humanoid project
+# export ZJUDANCER_ROBOTID=5
+# export ZJUDANCER_GUI=1
+# export ZJUDANCER_GPU=0
+# export ZJUDANCER_SIMULATION=true
 
 # ROS
+# export PYTHONPATH=${PYTHONPATH}:"/usr/lib/python2.7/dist-packages"
 # source /opt/ros/kinetic/setup.zsh
 # source $HOME/humanoid/devel/setup.zsh
 # source $HOME/humanoid-lib/devel/setup.zsh
+# export ROSCONSOLE_FORMAT='[${time} ${file}:${line}]: ${message}'
 
 # alias rcd='roscd'
 # alias e='rosed'
