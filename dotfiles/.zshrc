@@ -1,5 +1,5 @@
 export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
 export CUDA_HOME=/usr/local/cuda
 export ZSH=$HOME/.oh-my-zsh
 export TERM=xterm-256color
@@ -60,7 +60,11 @@ alias ff='find . -type f -name' # find files in current path
 alias fdr='sudo find / -type d -name' # find directories in root path
 alias ffr='sudo find / -type f -name' # find files in root path
 # dangerous operations with prompt
-alias rm='rm -i'
+alias mv='mv -i'
+alias mv='rm -i'
+for c in mv cp rm chmod chown rename; do
+  alias $c="$c -v"
+done
 # tmux
 alias t='TERM=xterm-256color tmux'
 alias tl='tmux list-sessions'
@@ -72,6 +76,7 @@ alias py2='python2'
 # print info
 alias dfh='df -hlT'
 alias gput='watch -n 1 nvidia-smi'
+alias tree='tree -F -A -I CVS'
 # package manager
 export apt_pref='apt-get' # change to apt-fast if you like
 alias aac='sudo $apt_pref autoclean'
